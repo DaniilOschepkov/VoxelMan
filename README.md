@@ -24,3 +24,7 @@ Everything can be changed from code, such things as octaves, scale for perlin no
 
 #License
 This code can be freely used for any goals, projects (may be games, lol)
+
+#Screenshots
+![FPS_ 37 27 11 2021 16_39_53](https://user-images.githubusercontent.com/95119309/143685048-9803f072-0ce5-4d8f-bc22-38a60b741910.png)
+![FPS_ 37 27 11 2021 16_39_44](https://user-images.githubusercontent.com/95119309/143685050-55b94d5e-8c3b-486a-99f3-933890370e9b.png)
