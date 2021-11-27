@@ -8,12 +8,6 @@ from globals import *
 # noise generator which allows to generate good noises
 noiseGenerator = NoiseGenerator()
 # other settings
-
-#height_map_img = pg.image.load('img/height_map.jpg')
-
-color_map_img = pg.image.load('img/color_map.jpg')
-color_map = pg.surfarray.array3d(color_map_img)
-
 height_map = noiseGenerator.perlin_noise((600,600))
 
 map_height = len(height_map[0])
@@ -52,7 +46,6 @@ def ray_casting(screen_array, player_pos, player_angle, player_height, player_pi
                 if 0 < y < map_height:
 
                     depth *= math.cos(player_angle - ray_angle)
-                    #height_on_screen = int((player_height-height_map[x,y][0]) / depth * scale_height + player_pitch)
                     height_on_screen = int((player_height - height_map[x, y]*100) / depth * scale_height + player_pitch)
 
                     if not first_contact:
@@ -64,8 +57,6 @@ def ray_casting(screen_array, player_pos, player_angle, player_height, player_pi
 
                     if height_on_screen < y_buffer[num_ray]:
                         for screen_y in range(height_on_screen, y_buffer[num_ray]):
-                            #screen_array[num_ray, screen_y] = color_map[x,y]
-
                             green = height_map[x,y]*100
                             screen_array[num_ray, screen_y] = (0, int(green), 0)
 
